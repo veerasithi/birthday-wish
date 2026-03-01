@@ -11,6 +11,23 @@ import { CommonModule } from '@angular/common';
 export class BirthdayWishComponent {
   showMemories = false;
 
+  // Playful Interaction State
+  clickCount = 0;
+  isButtonMoving = false;
+  buttonTop = '';
+  buttonLeft = '';
+  showMessage = false;
+  currentMessage = '';
+  messageTimeout: any;
+
+  messages = [
+    'Avlo easy ah click pana viduruven ah',
+    'Athulaya seri seri try on come',
+    'Mmm seri thumbi ku ena teart nu solluga',
+    'Seri seri Pavam ena nu pakkalama',
+    'Hahahaha Mudiyathu, Seri Once Again Happy Birthday My dear sister'
+  ];
+
   photos = [
     'IMG_3761.jpg', 'IMG_3892.jpg', 'IMG_4300.jpg', 'IMG_4310.jpg',
     'IMG_4574.jpg', 'IMG_4576.jpg', 'IMG_4582.jpg', 'IMG_4620.jpg',
@@ -21,6 +38,28 @@ export class BirthdayWishComponent {
   ];
 
   startMemories() {
-    this.showMemories = true;
+    if (this.clickCount < 5) {
+      this.currentMessage = this.messages[this.clickCount];
+      this.showMessage = true;
+      this.isButtonMoving = true;
+
+      // Calculate random screen position to safely jump to (avoiding screen edges)
+      this.buttonTop = Math.floor(Math.random() * 60 + 20) + '%';
+      this.buttonLeft = Math.floor(Math.random() * 60 + 20) + '%';
+
+      this.clickCount++;
+
+      // Clear previous timeout so rapid clicks reset the popup timer
+      if (this.messageTimeout) {
+        clearTimeout(this.messageTimeout);
+      }
+      this.messageTimeout = setTimeout(() => {
+        this.showMessage = false;
+      }, 2500);
+    } else {
+      // 6th click (index 5) reveals the photo collage!
+      this.showMemories = true;
+      this.showMessage = false;
+    }
   }
 }

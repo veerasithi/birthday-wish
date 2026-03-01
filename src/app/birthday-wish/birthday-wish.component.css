@@ -315,8 +315,52 @@
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(166, 77, 121, 0.3);
-  transition: all 0.3s ease;
+  transition: top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   letter-spacing: 1px;
+}
+
+.open-memories-btn.moving {
+  position: absolute;
+  margin: 0;
+  /* Centering the button perfectly on its coordinates */
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.toast-message {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #a64d79;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(166, 77, 121, 0.25);
+  z-index: 100;
+  text-align: center;
+  animation: slideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 90%;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+@keyframes slideDown {
+  from {
+    top: 20px;
+    opacity: 0;
+  }
+
+  to {
+    top: 60px;
+    opacity: 1;
+  }
 }
 
 .open-memories-btn:hover {
@@ -324,8 +368,16 @@
   box-shadow: 0 12px 25px rgba(166, 77, 121, 0.4);
 }
 
+.open-memories-btn.moving:hover {
+  transform: translate(-50%, calc(-50% - 3px));
+}
+
 .open-memories-btn:active {
   transform: translateY(1px);
+}
+
+.open-memories-btn.moving:active {
+  transform: translate(-50%, calc(-50% + 1px));
 }
 
 @media (max-width: 768px) {
