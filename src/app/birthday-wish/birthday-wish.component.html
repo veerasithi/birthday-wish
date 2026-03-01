@@ -1,4 +1,4 @@
-<div class="birthday-container">
+<div class="birthday-container" *ngIf="showMemories">
     <div class="collage-container">
         <!-- Top Row -->
         <div class="photo-row top-row">
@@ -76,5 +76,14 @@
                 and enduring embrace
             </p>
         </div>
+    </div>
+</div>
+
+<div class="landing-screen" *ngIf="!showMemories">
+    <div class="landing-content">
+        <h2 class="happy-text">Happy</h2>
+        <h1 class="birthday-text">Birthday</h1>
+        <h3 class="to-you-text">to you</h3>
+        <button class="open-memories-btn" (click)="startMemories()">Open Memories</button>
     </div>
 </div>

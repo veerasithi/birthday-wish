@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './birthday-wish.component.css'
 })
 export class BirthdayWishComponent {
+  showMemories = false;
+
   photos = [
     'IMG_3761.jpg', 'IMG_3892.jpg', 'IMG_4300.jpg', 'IMG_4310.jpg',
     'IMG_4574.jpg', 'IMG_4576.jpg', 'IMG_4582.jpg', 'IMG_4620.jpg',
@@ -17,4 +19,8 @@ export class BirthdayWishComponent {
     'IMG_5270.jpg', 'IMG_5274.jpg', 'IMG_5276.jpg', 'IMG_5279.jpg',
     'IMG_5300.jpg', 'IMG_5302.jpg'
   ];
+
+  startMemories() {
+    this.showMemories = true;
+  }
 }

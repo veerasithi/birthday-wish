@@ -256,3 +256,96 @@
     margin: -10px;
   }
 }
+
+/* --- LANDING SCREEN --- */
+.landing-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #f5c2eb 0%, #ebb2e3 30%, #f6d1fa 70%, #f0c3eb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  transform: translateY(-20px);
+}
+
+.happy-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #a64d79;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.birthday-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 9rem;
+  color: #4b3658;
+  margin: -10px 0 -20px 0;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(75, 54, 88, 0.1);
+}
+
+.to-you-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #a64d79;
+  font-weight: 500;
+  margin: 0;
+  align-self: flex-end;
+  margin-right: -10px;
+}
+
+.open-memories-btn {
+  margin-top: 50px;
+  padding: 14px 35px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #a64d79, #833965);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(166, 77, 121, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.open-memories-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(166, 77, 121, 0.4);
+}
+
+.open-memories-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .happy-text {
+    font-size: 2.2rem;
+  }
+
+  .birthday-text {
+    font-size: 6.5rem;
+  }
+
+  .to-you-text {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  .open-memories-btn {
+    margin-top: 40px;
+    padding: 12px 30px;
+  }
+}
