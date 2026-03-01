@@ -398,4 +398,73 @@
     margin-top: 40px;
     padding: 12px 30px;
   }
+
+  .note-title {
+    font-size: 2.2rem;
+  }
+
+  .note-text {
+    font-size: 0.7rem;
+  }
+
+  .center-note {
+    padding: 15px 10px 5px 10px;
+  }
+
+  .photo-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .polaroid {
+    width: clamp(75px, 22vw, 110px);
+    padding: 6px 6px 20px 6px;
+  }
+
+  .polaroid img {
+    height: clamp(75px, 22vw, 110px);
+  }
+
+  .polaroid-wrapper {
+    margin: -5px;
+  }
+
+  .side-photos {
+    flex-wrap: wrap;
+  }
+
+  .birthday-container {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+
+  .collage-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    height: auto;
+    padding: 0;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .center-note-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+  }
+
+  .center-spacer {
+    height: clamp(150px, 25vh, 250px);
+    width: 100vw;
+  }
+
+  .bottom-row {
+    margin-top: 0;
+  }
 }
