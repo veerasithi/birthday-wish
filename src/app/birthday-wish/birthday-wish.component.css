@@ -152,7 +152,7 @@
 }
 
 /* Handwritten date on polaroid */
-.handwritten-date {
+/* .handwritten-date {
   position: absolute;
   bottom: 8px;
   right: 15px;
@@ -160,7 +160,7 @@
   font-size: 1.2rem;
   color: #666;
   transform: rotate(-2deg);
-}
+} */
 
 /* Center Note Styling */
 .center-note-wrapper {

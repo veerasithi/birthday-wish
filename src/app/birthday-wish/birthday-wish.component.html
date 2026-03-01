@@ -7,9 +7,9 @@
                     <div class="polaroid">
                         <div class="tape" *ngIf="i % 2 === 0 || i % 3 === 0"></div>
                         <img [src]="'assets/Keerthana-Akka-photo/' + photo" alt="Memory" loading="lazy" />
-                        <div class="handwritten-date" *ngIf="i % 5 === 0">
+                        <!-- <div class="handwritten-date" *ngIf="i % 5 === 0">
                             {{ (i * 3 + 1) % 28 + 1 }}.{{ (i % 12) + 1 | number:'2.0' }}.2028
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </ng-container>
@@ -49,9 +49,9 @@
                     <div class="polaroid">
                         <div class="tape" *ngIf="(i + 14) % 2 === 0 || (i + 14) % 3 === 0"></div>
                         <img [src]="'assets/Keerthana-Akka-photo/' + photo" alt="Memory" loading="lazy" />
-                        <div class="handwritten-date" *ngIf="(i + 14) % 5 === 0">
+                        <!-- <div class="handwritten-date" *ngIf="(i + 14) % 5 === 0">
                             {{ ((i + 14) * 3 + 1) % 28 + 1 }}.{{ ((i + 14) % 12) + 1 | number:'2.0' }}.2028
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </ng-container>
