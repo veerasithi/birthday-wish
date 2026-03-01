@@ -21,11 +21,11 @@ export class BirthdayWishComponent {
   messageTimeout: any;
 
   messages = [
-    'Avlo easy ah click pana viduruven ah',
-    'Athulaya seri seri try on come',
-    'Mmm seri thumbi ku ena teart nu solluga',
-    'Seri seri Pavam ena nu pakkalama',
-    'Hahahaha Mudiyathu, Seri Once Again Happy Birthday My dear sister'
+    'Avlo easy ah click pana viduruven ah 😅🏃‍♀️',
+    'Athulaya seri seri try panuga 😎✨',
+    'Mmm seri thumbi ku ena treat nu solluga...... 🍰😋',
+    'Seri seri Pavam nu viduren... 🥺',
+    'Hahahaha Mudiyathu Summa sone... Seri Once Again Happy Birthday My dear sister 🎉'
   ];
 
   photos = [
@@ -55,7 +55,7 @@ export class BirthdayWishComponent {
       }
       this.messageTimeout = setTimeout(() => {
         this.showMessage = false;
-      }, 2500);
+      }, 5000); // Increased from 2500ms to 4000ms
     } else {
       // 6th click (index 5) reveals the photo collage!
       this.showMemories = true;
